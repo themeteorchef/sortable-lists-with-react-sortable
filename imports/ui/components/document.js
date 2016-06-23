@@ -38,9 +38,10 @@ const handleRemoveDocument = (documentId, event) => {
 };
 
 export const Document = ({ document }) => (
-  <ListGroupItem key={ document._id }>
+  <ListGroupItem data-id={ document._id } key={ document._id }>
     <Row>
       <Col xs={ 8 } sm={ 10 }>
+        <i className="fa fa-bars"></i>
         <FormControl
           type="text"
           standalone

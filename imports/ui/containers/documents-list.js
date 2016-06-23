@@ -7,7 +7,7 @@ import { Meteor } from 'meteor/meteor';
 const composer = (params, onData) => {
   const subscription = Meteor.subscribe('documents');
   if (subscription.ready()) {
-    const documents = Documents.find().fetch();
+    const documents = Documents.find({}, { sort: { order: 1 } }).fetch();
     onData(null, { documents });
   }
 };

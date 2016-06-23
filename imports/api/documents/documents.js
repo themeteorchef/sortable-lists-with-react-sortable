@@ -22,6 +22,10 @@ Documents.schema = new SimpleSchema({
     type: String,
     label: 'The title of the document.',
   },
+  order: {
+    type: Number,
+    label: 'The order position of the document.',
+  },
 });
 
 Documents.attachSchema(Documents.schema);

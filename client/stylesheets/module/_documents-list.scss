@@ -1,0 +1,15 @@
+.documents-list .list-group-item {
+  i,
+  input {
+    float: left;
+  }
+
+  i {
+    font-size: 18px;
+    margin: 8px 10px 0 0;
+  }
+
+  input {
+    width: calc(100% - 28px);
+  }
+}

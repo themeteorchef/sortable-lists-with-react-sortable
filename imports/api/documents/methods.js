@@ -18,6 +18,7 @@ export const updateDocument = new ValidatedMethod({
   validate: new SimpleSchema({
     _id: { type: String },
     'update.title': { type: String, optional: true },
+    'update.order': { type: Number, optional: true },
   }).validator(),
   run({ _id, update }) {
     Documents.update(_id, { $set: update });
@@ -40,6 +41,6 @@ rateLimit({
     updateDocument,
     removeDocument,
   ],
-  limit: 5,
+  limit: 100,
   timeRange: 1000,
 });
